@@ -2,7 +2,7 @@
 
 <div class="box">
 <!--[form:issue_status]-->
-<p><label for="issue_status_name"><%=l(:field_name)%><span class="required"> *</span></label>
+<p><label for="issue_status_name"><%=l(:field_name)%><span class="required" title="<%= h(l(:field_is_required)) %>"> *</span></label>
 <%= text_field 'issue_status', 'name'  %></p>
 
 <% if Issue.use_status_for_done_ratio? %>

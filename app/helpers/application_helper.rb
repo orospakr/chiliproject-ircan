@@ -758,7 +758,7 @@ module ApplicationHelper
   end
 
   def label_tag_for(name, option_tags = nil, options = {})
-    label_text = l(("field_"+field.to_s.gsub(/\_id$/, "")).to_sym) + (options.delete(:required) ? @template.content_tag("span", " *", :class => "required"): "")
+    label_text = l(("field_"+field.to_s.gsub(/\_id$/, "")).to_sym) + (options.delete(:required) ? @template.content_tag("span", " *", {:title => l(:field_is_required), :class => "required" }): "")
     content_tag("label", label_text)
   end
 

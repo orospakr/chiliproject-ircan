@@ -3,7 +3,7 @@
 	url = git://github.com/Jehreg/redmine_join_project.git
 [submodule "vendor/plugins/redmine_clf2"]
 	path = vendor/plugins/redmine_clf2
-	url = git://github.com/Jehreg/redmine-clf2.git
+	url = git://github.com/orospakr/redmine-clf2.git
 [submodule "vendor/plugins/timesheet_plugin"]
 	path = vendor/plugins/timesheet_plugin
 	url = git://github.com/asoltys/redmine-timesheet-plugin.git

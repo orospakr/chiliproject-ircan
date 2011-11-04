@@ -15,4 +15,4 @@
 	url = git://github.com/asoltys/redmine-budget-plugin.git
 [submodule "vendor/plugins/redmine_git_hosting"]
 	path = vendor/plugins/redmine_git_hosting
-	url = git://github.com/Jehreg/redmine_git_hosting.git
+	url = git://github.com/orospakr/redmine_git_hosting.git

@@ -1,5 +1,10 @@
+<script>
+var label_attachment_text = "<%=h l(:label_attachment)%>";
+var label_attachment_description_text = "<%=h l(:label_optional_description) %>";
+</script>
+
 <span id="attachments_fields">
-<%= file_field_tag 'attachments[1][file]', :size => 30, :id => nil  -%><label class="inline"><span id="attachment_description_label_content"><%= l(:label_optional_description) %></span><%= text_field_tag 'attachments[1][description]', '', :size => 60, :id => nil %>
+<label for="attachments[1][file]"><%=h l(:label_attachment)%> 1</label><%= file_field_tag 'attachments[1][file]', :size => 30, :id => 'attachments[1][file]'  -%><label class="inline"><span id="attachment_description_label_content"><%= l(:label_optional_description) %></span><%= text_field_tag 'attachments[1][description]', '', :size => 60, :id => nil %>
 </label>
 </span>
 <br />

@@ -88,9 +88,13 @@ var fileFieldCount = 1;
 function addFileField() {
     if (fileFieldCount >= 10) return false
     fileFieldCount++;
+    var l = document.createElement("label");
+    l.htmlFor = "attachments[" + fileFieldCount + "][file]";
+    l.update(label_attachment_text + " " + fileFieldCount);
     var f = document.createElement("input");
     f.type = "file";
     f.name = "attachments[" + fileFieldCount + "][file]";
+    f.id = "attachments[" + fileFieldCount + "][file]";
     f.size = 30;
     var d = document.createElement("input");
     d.type = "text";
@@ -99,9 +103,10 @@ function addFileField() {
     var dLabel = new Element('label');
     dLabel.addClassName('inline');
     // Pulls the languge value used for Optional Description
-    dLabel.update($('attachment_description_label_content').innerHTML)
+    dLabel.update(label_attachment_description_text);
     p = document.getElementById("attachments_fields");
     p.appendChild(document.createElement("br"));
+    p.appendChild(l);
     p.appendChild(f);
     p.appendChild(dLabel);
     dLabel.appendChild(d);

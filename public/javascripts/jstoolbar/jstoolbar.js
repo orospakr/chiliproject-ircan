@@ -41,7 +41,7 @@ function jsToolBar(textarea) {
 	this.editor.appendChild(this.textarea);
 
     this.skipaid = document.createElement('a');
-    this.skipaid.className = "justElementsSkipAid";
+    this.skipaid.className = "jstElementsSkipAid";
     this.skipaid.href = "#" + textarea.id;
     this.skipaid.innerHTML = jsToolBar.strings['Skip Formatting Toolbar'];
     this.editor.parentNode.insertBefore(this.skipaid, this.editor);

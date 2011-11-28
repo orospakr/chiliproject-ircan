@@ -14,3 +14,4 @@ jsToolBar.strings['Unquote'] = 'Supprimer citation';
 jsToolBar.strings['Preformatted text'] = 'Texte préformaté';
 jsToolBar.strings['Wiki link'] = 'Lien vers une page Wiki';
 jsToolBar.strings['Image'] = 'Image';
+jsToolBar.strings['Skip Formatting Toolbar'] = "Passer la barre d'outils Formatage";

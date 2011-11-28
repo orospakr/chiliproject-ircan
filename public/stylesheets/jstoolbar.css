@@ -38,6 +38,17 @@
 	display : inline;
 }
 
+.jstElementsSkipAid {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    float: right;
+    font-size: 0;
+    position: absolute;
+    top:auto;
+    left: -10000px;
+}
+
 .jstSpacer {
 	width : 0px;
 	font-size: 1px;

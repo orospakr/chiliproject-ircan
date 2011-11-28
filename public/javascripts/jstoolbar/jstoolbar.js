@@ -33,12 +33,18 @@ function jsToolBar(textarea) {
 	}
 	
 	this.textarea = textarea;
-	
+
 	this.editor = document.createElement('div');
 	this.editor.className = 'jstEditor';
 	
 	this.textarea.parentNode.insertBefore(this.editor,this.textarea);
 	this.editor.appendChild(this.textarea);
+
+    this.skipaid = document.createElement('a');
+    this.skipaid.className = "justElementsSkipAid";
+    this.skipaid.href = "#" + textarea.id;
+    this.skipaid.innerHTML = jsToolBar.strings['Skip Formatting Toolbar'];
+    this.editor.parentNode.insertBefore(this.skipaid, this.editor);
 	
 	this.toolbar = document.createElement("div");
 	this.toolbar.className = 'jstElements';
@@ -60,6 +66,8 @@ function jsToolBar(textarea) {
 		
 		this.editor.parentNode.insertBefore(this.handle,this.editor.nextSibling);
 	}
+
+    
 	
 	this.context = null;
 	this.toolNodes = {}; // lorsque la toolbar est dessinée , cet objet est garni 

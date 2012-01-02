@@ -85,22 +85,26 @@ Event.observe(document,"dom:loaded", apply_filters_observer);
         <label for="cb_<%= field %>"><%= filter[1][:name] || l(("field_"+field.to_s.gsub(/\_id$/, "")).to_sym) %></label>
     </td>
     <td style="width:150px;">
-        <%= label_tag "op_#{field}", l(:description_filter), :class => "hidden-for-sighted" %>
-        <%= select_tag "op[#{field}]", options_for_select(operators_for_select(options[:type]), query.operator_for(field)), :id => "operators_#{field}", :onchange => "toggle_operator('#{field}');", :class => "select-small", :style => "vertical-align: top;" %>
+        <%= label_tag "operators_#{field}", l(:description_filter), :class => "hidden-for-sighted" %>
+        <%= select_tag "op[#{field}]", options_for_select(operators_for_select(options[:type]), query.operator_for(field)), :id => "operators_#{field}", :onchange => "toggle_operator('#{field}');", :class => "select-small", :style => "vertical-align: top;", "aria-controls" => "div_values_#{field}" %>
     </td>
     <td>
     <div id="div_values_<%= field %>" style="display:none;">
     <% case options[:type]
     when :list, :list_optional, :list_status, :list_subprojects %>
+        <%= label_tag "values_#{field}", l(:field_possible_values), :class => "hidden-for-sighted" %>
         <select <%= "multiple=true" if query.values_for(field) and query.values_for(field).length > 1 %> name="v[<%= field %>][]" id="values_<%= field %>" class="select-small" style="vertical-align: top;">
         <%= options_for_select options[:values], query.values_for(field) %>
         </select>
-        <%= link_to_function image_tag('bullet_toggle_plus.png'), "toggle_multi_select('#{field}');", :style => "vertical-align: bottom;" %>
+        <%= link_to_function image_tag('bullet_toggle_plus.png'), "toggle_multi_select('#{field}');", :style => "vertical-align: bottom;", :title => l(:label_filter_multiple_values) %>
     <% when :date, :date_past %>
+        <%= label_tag "values_#{field}", l(:field_value), :class => "hidden-for-sighted"  %>
         <%= text_field_tag "v[#{field}][]", query.values_for(field), :id => "values_#{field}", :size => 3, :class => "select-small" %> <%= l(:label_day_plural) %>
     <% when :string, :text %>
+        <%= label_tag "values_#{field}", l(:field_value), :class => "hidden-for-sighted"  %>
         <%= text_field_tag "v[#{field}][]", query.values_for(field), :id => "values_#{field}", :size => 30, :class => "select-small" %>
     <% when :integer %>
+        <%= label_tag "values_#{field}", l(:field_value), :class => "hidden-for-sighted"  %>
         <%= text_field_tag "v[#{field}][]", query.values_for(field), :id => "values_#{field}", :size => 3, :class => "select-small" %>
     <% end %>
     </div>

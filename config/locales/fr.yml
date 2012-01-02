@@ -604,6 +604,7 @@ fr:
   label_my_queries: Mes rapports personnalisés
   label_filter_add: "Ajouter le filtre "
   label_filter_plural: Filtres
+  label_filter_multiple_values: "Basculer l'utilisation de valeurs multiples"
   label_equals: égal
   label_not_equals: différent
   label_in_less_than: dans moins de

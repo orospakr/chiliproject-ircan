@@ -603,6 +603,7 @@ en:
   label_my_queries: My custom queries
   label_filter_add: Add filter
   label_filter_plural: Filters
+  label_filter_multiple_values: Toggle use of multiple values
   label_equals: is
   label_not_equals: is not
   label_in_less_than: in less than

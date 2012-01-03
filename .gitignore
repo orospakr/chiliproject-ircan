@@ -28,3 +28,4 @@ doc/app
 /Gemfile.lock
 /Gemfile.local
 /.rvmrc*
+/vendor/bundle
